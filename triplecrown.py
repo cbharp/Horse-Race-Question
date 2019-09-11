@@ -40,11 +40,11 @@ def time_in_hrs(time):
 fpm = 7.99998
 mpf = 0.125
 
-belmont_dist   = 12 * mpf
-kentucky_dist  = 10 * mpf 
-preakness_dist = 9.5 * mpf
+belmont_dist   = 12 * fpm
+kentucky_dist  = 10 * fpm 
+preakness_dist = 9.5 * fpm
 
-average_mph = ((time_in_hrs(belmont)/belmont_dist) + (time_in_hrs(kentucky)/kentucky_dist) + (time_in_hrs(preakness)/preakness_dist))/3
+average_mph = (belmont_dist/time_in_hrs(belmont) + kentucky_dist/time_in_hrs(kentucky) + preakness_dist/time_in_hrs(preakness))/3
 print_mph = str(round(average_mph, 2))
 
 print('\n')
